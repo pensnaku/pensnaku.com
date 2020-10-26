@@ -16,7 +16,7 @@ div,
 }
 
 .mobile {
-  display: none;
+  display: none !important;
 }
 
 html,
@@ -105,7 +105,7 @@ ul {
   }
 
   .desktop {
-    display: none;
+    display: none !important;
   }
 
   #header img#logo {

@@ -2,7 +2,7 @@
   <div id="app">
     <Header :current-route="currentRoute" />
     <pens-image id="pens-image-component" class="mobile" />
-    <div id="app-sub-wrapper" class="mobile">
+    <div id="app-sub-wrapper">
       <div id="image-component-holder" class="desktop">
         <pens-image id="pens-image-component" />
       </div>
