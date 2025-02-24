@@ -1,22 +1,6 @@
 @font-face {
-  font-family: Cubano;
-  src: url('../src/assets/fonts/Cubano\ Regular.ttf');
-}
-@font-face {
-  font-family: poppins;
-  src: url('../src/assets/fonts/Poppins-SemiBold.ttf');
-}
-@font-face {
-  font-family: grotesk;
-  src: url('../src/assets/fonts/Aktiv\ Grotesk\ Bold.ttf');
-}
-@font-face {
   font-family: quicksand;
   src: url('../src/assets/fonts/Quicksand-VariableFont_wght.ttf');
-}
-@font-face {
-  font-family: nunito;
-  src: url('../src/assets/fonts/Nunito-VariableFont_wght.ttf');
 }
 
 @import 'tailwindcss';
@@ -25,11 +9,7 @@
   --color-primary: purple;
   --color-lush-lime: #bada55;
   --color-midnight-shadow: #1a1a1a;
-  --font-cubano: Cubano, 'sans-serif';
-  --font-poppins: Poppins, 'sans-serif';
-  --font-grotesk: Grotesk, 'sans-serif';
   --font-quicksand: Quicksand, 'sans-serif';
-  --font-nunito: Nunito, 'sans-serif';
   --text-name: 14rem;
   --text-name--line-height: 14rem;
   --text-name--letter-spacing: 0.5rem;
