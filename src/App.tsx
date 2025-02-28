@@ -25,7 +25,7 @@ import { Skills } from './components/Skills';
 
 function App() {
   return (
-    <div className='max-w-[1800px] mx-auto px-3 lg:px-40 font-quicksand text-midnight-shadow'>
+    <div className='max-w-[1800px] mx-auto px-5 lg:px-40 font-quicksand text-midnight-shadow'>
       <div className='h-svh flex flex-col justify-between'>
         <div className='lg:hidden md:hidden mt-5 ml-auto'>
           <img

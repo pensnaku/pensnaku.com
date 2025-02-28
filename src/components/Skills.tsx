@@ -84,15 +84,16 @@ export function Skills() {
         {skills.map((skill, index) => {
           return (
             <div
-              className={`px-10 ${index < skills.length - 1 ? 'mr-10' : ''}`}
+              className={`px-10 ${
+                index < skills.length - 1 ? 'mr-2 md:mr-5 lg:mr-10' : ''
+              }`}
             >
               <img
                 src={skill.icon}
-                height={80}
-                width={80}
-                className='grayscale invert'
+                className='grayscale invert h-8 w-8 md:h-20 md:w-20 m-auto'
+                alt='skills'
               />
-              <div className='text-midnight-shadow font-quicksand text-center mt-5'>
+              <div className='text-[10px] md:text-[15px] text-midnight-shadow font-quicksand text-center mt-5'>
                 {skill.name}
               </div>
             </div>
