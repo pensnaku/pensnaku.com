@@ -8,7 +8,10 @@
 @theme {
   --color-primary: purple;
   --color-lush-lime: #bada55;
-  --color-midnight-shadow: #1a1a1a;
+  --color-urban-slate: #6c757d;
+  --color-midnight-shadow: #3e3e3e;
+  --color-cloud-whisper: #f2f2f2;
+  --color-silver-mist: #cccccc;
   --font-quicksand: Quicksand, 'sans-serif';
   --text-name: 14rem;
   --text-name--line-height: 14rem;
@@ -16,5 +19,13 @@
 }
 
 * {
-  @apply scroll-smooth;
+  @apply scroll-smooth text-urban-slate;
+}
+
+.sub-header {
+  @apply font-semibold text-2xl leading-10;
+}
+
+.header-text {
+  @apply text-midnight-shadow text-2xl;
 }
