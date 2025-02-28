@@ -33,6 +33,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           local-dir: dist/
-          server-dir: pensnaku/
-          dry-run: true
           port: 21
