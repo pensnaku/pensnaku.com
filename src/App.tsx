@@ -21,6 +21,7 @@ import menuClose from './assets/images/menu-closed.svg';
 import { PortfolioCarousel } from './components/Portfolio';
 import { ContactLinks } from './components/ContactLinks';
 import { Divider } from './components/Divider';
+import { Skills } from './components/Skills';
 
 function App() {
   return (
@@ -75,7 +76,14 @@ function App() {
           </p>
         </div>
       </div>
-      <div className='my-40 md:my-60 lg:my-80' id='about'>
+      <div className='my-40'>
+        <div className='text-4xl lg:text-6xl font-quicksand font-bold text-midnight-shadow!'>
+          Skills
+        </div>
+        <Divider />
+        <Skills />
+      </div>
+      <div className='my-30 md:my-60 lg:my-80' id='about'>
         <div className='text-4xl lg:text-6xl font-quicksand font-bold text-midnight-shadow!'>
           About me
         </div>
