@@ -16,30 +16,100 @@ import printpartners3 from './assets/images/print-partners-3.png';
 import printpartners4 from './assets/images/print-partners-4.png';
 
 import menuClose from './assets/images/menu-closed.svg';
-// import menuOpen from './assets/images/menu-open.svg';
+import menuOpen from './assets/images/menu-open.svg';
 
 import { PortfolioCarousel } from './components/Portfolio';
 import { ContactLinks } from './components/ContactLinks';
 import { Divider } from './components/Divider';
 import { Skills } from './components/Skills';
+import React, { useState } from 'react';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const openMenu = () => {
+    setIsOpen(true);
+  };
+
+  const navigateAndClose = (event: React.MouseEvent, sectionId: string) => {
+    event.preventDefault();
+    closeMenu();
+    setTimeout(() => {
+      document.querySelector(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }, 500);
+  };
   return (
     <div className='max-w-[1800px] mx-auto px-5 lg:px-40 font-quicksand text-midnight-shadow'>
-      <div className='h-svh flex flex-col justify-between'>
-        <div className='lg:hidden md:hidden mt-5 ml-auto'>
-          <img
-            src={menuClose}
-            alt='Link to printpartners'
-            className='w-6 h-6'
-          />
+      {isOpen && (
+        <div className='fixed md:hidden inset-0 bg-[#0000007a] bg-opacity-50 flex justify-center items-center p-5 z-20'>
+          <div className='bg-white p-5 rounded-lg shadow-lg w-full h-11/12'>
+            <img
+              src={menuOpen}
+              alt='Close menu'
+              onClick={closeMenu}
+              className='w-7 h-7 ml-auto'
+            />
+            <div className='flex flex-col h-2/4 justify-between'>
+              <a
+                href='#skills'
+                className='relative cursor-pointer group text-[18px] border-b-[0.1px] border-b-silver-mist py-5'
+                onClick={(e) => navigateAndClose(e, '#skills')}
+              >
+                Skills
+                <span className='absolute left-0 bottom-5 w-0 h-[2.5px] bg-lush-lime transition-all duration-300 group-hover:w-full'></span>
+              </a>
+              <a
+                href='#about'
+                className='relative cursor-pointer group text-[18px] border-b-[0.2px] border-b-silver-mist py-5'
+                onClick={(e) => navigateAndClose(e, '#about')}
+              >
+                About
+                <span className='absolute left-0 bottom-5 w-0 h-[2.5px] bg-lush-lime transition-all duration-300 group-hover:w-full'></span>
+              </a>
+
+              <a
+                href='#portfolio'
+                className='relative cursor-pointer group text-[18px] border-b-[0.2px] border-b-silver-mist py-5'
+                onClick={(e) => navigateAndClose(e, '#portfolio')}
+              >
+                Portfolio
+                <span className='absolute left-0 bottom-5 w-0 h-[2.5px] bg-lush-lime transition-all duration-300 group-hover:w-full'></span>
+              </a>
+
+              <a
+                href='#contact'
+                className='relative cursor-pointer group text-[18px] border-b-[0.2px] border-b-silver-mist py-5'
+                onClick={(e) => navigateAndClose(e, '#contact')}
+              >
+                Contact
+                <span className='absolute left-0 bottom-5 w-0 h-[2.5px] bg-lush-lime transition-all duration-300 group-hover:w-full'></span>
+              </a>
+            </div>
+          </div>
         </div>
+      )}
+
+      <div className='h-svh flex flex-col justify-between'>
+        <div className='md:hidden mt-5 ml-auto' onClick={openMenu}>
+          {!isOpen ? (
+            <img src={menuClose} alt='Open the menu' className='w-6 h-6' />
+          ) : null}
+        </div>
+
         <div className='md:flex py-5 hidden'>
           <div className='font-medium lg:block'>
             Based in <br />
             Rotterdam, Netherlands
           </div>
           <div className='flex w-1/3 ml-auto flex-row justify-between font-medium'>
+            <a href='#skills' className='relative cursor-pointer group'>
+              Skills
+              <span className='absolute left-0 bottom-5 w-0 h-[2.5px] bg-lush-lime transition-all duration-300 group-hover:w-full'></span>
+            </a>
             <a href='#about' className='relative cursor-pointer group'>
               About
               <span className='absolute left-0 bottom-5 w-0 h-[2.5px] bg-lush-lime transition-all duration-300 group-hover:w-full'></span>
@@ -76,7 +146,7 @@ function App() {
           </p>
         </div>
       </div>
-      <div className='my-40'>
+      <div className='my-40' id='skills'>
         <div className='text-4xl lg:text-6xl font-quicksand font-bold text-midnight-shadow!'>
           Skills
         </div>
