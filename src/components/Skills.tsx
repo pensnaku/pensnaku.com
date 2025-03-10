@@ -81,13 +81,9 @@ export function Skills() {
   return (
     <>
       <Marquee>
-        {skills.map((skill, index) => {
+        {skills.map((skill) => {
           return (
-            <div
-              className={`px-10 ${
-                index < skills.length - 1 ? 'mr-2 md:mr-5 lg:mr-10' : ''
-              }`}
-            >
+            <div className='px-10 mr-2 md:mx-5 lg:mx-7 cursor-grab'>
               <img
                 src={skill.icon}
                 className='grayscale invert h-8 w-8 md:h-20 md:w-20 m-auto'

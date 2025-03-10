@@ -126,9 +126,9 @@ function App() {
             </a>
           </div>
         </div>
-        <div>
-          <div className='flex animate-fade-in'>
-            <span className='text-midnight-shadow! text-8xl w-full text-center md:text-name md:text-left font-quicksand font-bold'>
+        <div className='pl-0'>
+          <div className='flex animate-fade-in p-0'>
+            <span className='text-midnight-shadow! pl-0 text-8xl w-full text-center md:text-name md:text-left font-quicksand font-bold'>
               EEDEE
             </span>
           </div>
@@ -176,8 +176,9 @@ function App() {
             <p>
               My expertise lies in system architecture and performance
               optimization, ensuring technology aligns seamlessly with strategic
-              business objectives. Additionally, I founded{' '}
-              <a
+              business objectives.
+              {/* Additionally, I founded{' '} *
+               <a
                 href='https://vervana.io'
                 className='relative cursor-pointer group text-lush-lime!'
               >
@@ -185,7 +186,7 @@ function App() {
                 <span className='absolute mt-1 left-0 bottom-0 w-0 h-[2.5px] bg-lush-lime transition-all duration-300 group-hover:w-full'></span>
               </a>{' '}
               to provide practical technical solutions to businesses and
-              individuals
+              individuals */}
             </p>
             <br />
             <p>
